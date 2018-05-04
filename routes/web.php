@@ -16,3 +16,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/register', 'AuthController@register');
 
 Route::get('/login', 'AuthController@login');
+
+Route::get('/admin/dashboard', function(){
+   return view('dashboard');
+});
