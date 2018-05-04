@@ -1,5 +1,7 @@
 @extends('layouts.landing_template')
 
+@section('title', 'Home | Dokuter')
+
 @section('content')
     <div class="page-header header-filter" filter-color="purple" data-parallax="true" style=" background-image: url('{{ asset('img/welcome-bg.png') }}');">
         <div class="container">
@@ -281,9 +283,10 @@
             </div>
         </div>
     </div>
-    <script>
-        document.title = "Dokuter";
+@endsection
 
+@section('custom_script')
+    <script>
         const body = document.getElementsByTagName("body")[0];
         body.classList.add("landing-page");
 

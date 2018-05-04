@@ -1,7 +1,8 @@
 @extends('layouts.landing_template')
 
-@section('content')
+@section('title', 'Register | Dokuter')
 
+@section('content')
     <div class="page-header header-filter" filter-color="purple" data-parallex="true" style="background-size: cover; background: url('{{ asset('img/bg7.jpg') }}') top center">
         <div class="container">
             <div class="row">
@@ -115,8 +116,6 @@
 
 @section('custom_script')
     <script>
-        document.title = "Register - Dokuter";
-
         const body = document.getElementsByTagName("body")[0];
         body.classList.add("signup-page");
 
