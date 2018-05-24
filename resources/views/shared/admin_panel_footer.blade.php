@@ -1,36 +1,32 @@
-<footer class="footer ">
-    <div class="container-fluid">
+<footer class="footer">
+    <div class="container">
         <nav class="pull-left">
             <ul>
                 <li>
-                    <a href="https://www.creative-tim.com">
-                        Creative Tim
+                    <a href="/">
+                        Dokuter
                     </a>
                 </li>
                 <li>
-                    <a href="http://presentation.creative-tim.com">
+                    <a href="/">
                         About Us
                     </a>
                 </li>
                 <li>
-                    <a href="http://blog.creative-tim.com">
+                    <a href="/">
                         Blog
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.creative-tim.com/license">
+                    <a href="/">
                         Licenses
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="copyright pull-right">
-            &copy;
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            , made with love by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            &copy; {{ date('Y') }}, made with <i class="material-icons">favorite</i> by
+            <a href="/" target="_blank">Dokuter</a> for a better world.
         </div>
     </div>
 </footer>
