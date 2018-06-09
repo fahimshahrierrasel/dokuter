@@ -19,7 +19,8 @@ class CreateDoctorsTable extends Migration
             $table->date('dob');
             $table->string('education', 250);
             $table->smallInteger('experience');
-
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references("id")->on("users");
             $table->timestamps();
         });
     }
