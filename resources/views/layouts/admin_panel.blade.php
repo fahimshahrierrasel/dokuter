@@ -18,13 +18,13 @@
 
 <body class="">
 <div class="wrapper">
-    @include('shared.admin_panel_sidebar')
+    @include('layouts.admin_panel_sidebar')
     <div class="main-panel">
-        @include('shared.admin_panel_nav')
+        @include('layouts.admin_panel_nav')
         <div class="content">
             @yield('content')
         </div>
-        @include('shared.admin_panel_footer')
+        @include('layouts.admin_panel_footer')
     </div>
 </div>
 </body>

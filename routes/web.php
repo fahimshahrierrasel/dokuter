@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+use Illuminate\Support\Facades\Route;
 
-Route::get('/register', 'AuthController@register');
+Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/login', 'AuthController@login');
+Auth::routes();
 
-Route::get('/admin/dashboard', function(){
-   return view('dashboard');
-});
+Route::get('/home', 'HomeController@index')->name('home');

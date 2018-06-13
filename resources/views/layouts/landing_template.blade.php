@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="{{ asset('css/material-kit.css?v=2.0.2') }}">
 </head>
 <body>
-@include('shared.landing_nav')
+@include('layouts.landing_nav')
 
 @yield('content')
 
-@include('shared.landing_footer')
+@include('layouts.landing_footer')
 
 
 <!--   Core JS Files   -->
