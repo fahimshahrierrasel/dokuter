@@ -22,21 +22,34 @@
                                     <h4> or be classical </h4>
                                 </div>
                                 <form class="form" method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    @if(session()->has('login_error'))
+                                        <div class="alert alert-danger">
+                                            <div class="container">
+                                                <div class="alert-icon">
+                                                    <i class="material-icons">error_outline</i>
+                                                </div>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                                </button>
+                                                {{ session()->get('login_error') }}
+                                            </div>
+                                        </div>
+                                    @endif
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </span>
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
                                             </div>
-                                            <input id="email" type="email"
+                                            <input id="identity" type="identity"
                                                    class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                                   name="email" value="{{ old('email') }}" placeholder="Email..."
+                                                   name="identity" value="{{ old('identity') }}" placeholder="Email or Username"
                                                    required>
-
-                                            @if ($errors->has('email'))
+                                            @if ($errors->has('identity'))
                                                 <span class="invalid-feedback">
-                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                    <strong>{{ $errors->first('identity') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
@@ -70,7 +83,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="text-center">
                                         <input type="submit" class="btn btn-primary btn-round btn-lg" value="Login">
                                     </div>
@@ -81,8 +93,6 @@
                                     </a><br>
                                     <span>Don't have an account yet?</span> <a href="{{ route('register') }}">Register</a>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

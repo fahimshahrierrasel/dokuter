@@ -16,6 +16,7 @@ class UserRegistrationSuccess extends Notification
      * @var User
      */
     protected $user;
+
     /**
      * Create a new notification instance.
      * @param User $user
@@ -47,13 +48,13 @@ class UserRegistrationSuccess extends Notification
     {
         $user = $this->user;
         return (new MailMessage)
-            ->from(env('ADMIN_MAIL'))
+            ->from('admin@dokuter.com')
             ->subject('Registration Successful')
             ->greeting(sprintf('Hello %s', $user->name))
             ->line('You have successfully registered to Dokuter. Please activate your account.')
             ->action('Click Here', route('activate.user', $user->activation_code))
             ->line('Thank you for using our application!')
-            ->salutation('Regards<br>Dokuter Admin');
+            ->salutation('Dokuter Admin');
     }
 
     /**

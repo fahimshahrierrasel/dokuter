@@ -11,8 +11,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{ asset('css/material-dashboard.css?v=2.0.0') }}">
 </head>
 
@@ -41,5 +42,4 @@
 <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
 <script src="{{ asset('js/material-dashboard.js?v=2.0.0') }}"></script>
-
 </html>

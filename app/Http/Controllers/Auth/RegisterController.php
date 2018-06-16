@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Notifications\UserRegistrationSuccess;
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
