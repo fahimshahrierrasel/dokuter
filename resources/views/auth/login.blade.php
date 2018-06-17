@@ -20,22 +20,22 @@
                                         <i class="fa fa-facebook-f"> </i>
                                     </button>
                                     <h4> or be classical </h4>
-                                </div>
-                                <form class="form" method="POST" action="{{ route('login') }}">
-                                    @csrf
-                                    @if(session()->has('login_error'))
+                                    @if(session()->has('error'))
                                         <div class="alert alert-danger">
-                                            <div class="container">
+                                            <div>
                                                 <div class="alert-icon">
                                                     <i class="material-icons">error_outline</i>
                                                 </div>
                                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                     <span aria-hidden="true"><i class="material-icons">clear</i></span>
                                                 </button>
-                                                {{ session()->get('login_error') }}
+                                                {{ Session::get("error") }}
                                             </div>
                                         </div>
                                     @endif
+                                </div>
+                                <form class="form" method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">

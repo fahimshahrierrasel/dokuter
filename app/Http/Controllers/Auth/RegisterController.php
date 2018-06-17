@@ -59,9 +59,11 @@ class RegisterController extends Controller
             $validatedData['password'] = bcrypt(array_get($validatedData, 'password'));
             $validatedData['activation_code'] = str_random(30) . time();
             $user = app(User::class)->create($validatedData);
+            $user->roles()
+                ->attach((new \App\Role)->where('name', 'doctor')->first());
         } catch (\Exception $exception) {
             logger()->error($exception);
-            return redirect()->back()->with('message', 'Unable to create new user.');
+            return redirect()->back()->with('error', 'Unable to create new user.');
         }
         $user->notify(new UserRegistrationSuccess($user));
         return redirect()->back()->with('message', 'Successfully created a new account. Please check your email and activate your account.');
