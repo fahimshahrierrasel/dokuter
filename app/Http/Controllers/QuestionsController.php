@@ -14,7 +14,8 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        return view('admin.questions', []);
+        $questions = Question::all();
+        return view('admin.questions', compact('questions'));
     }
 
     /**
