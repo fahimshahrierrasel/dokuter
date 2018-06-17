@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>@yield('title')</title>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="{{ asset('css/material-dashboard.css?v=2.0.0') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@yield('page_title')</title>
+    <!-- Bootstrap core CSS-->
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
 </head>
 
-<body class="">
-<div class="wrapper">
-    @include('layouts.admin_panel_sidebar')
-    <div class="main-panel">
-        @include('layouts.admin_panel_nav')
-        <div class="content">
-            @yield('content')
-        </div>
-        @include('layouts.admin_panel_footer')
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+@include('layouts.admin_panel_nav')
+<div class="content-wrapper">
+    <div class="container-fluid">
+        @yield('content')
     </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    @include('layouts.admin_panel_footer')
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    @include('layouts.admin_panel_modal')
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('js/sb-admin.min.js') }}"></script>
+    @yield('custom_scripts')
 </div>
 </body>
-<!--   Core JS Files   -->
-<script src="{{ asset('js/core/jquery.min.js') }}"></script>
-<script src="{{ asset('js/core/popper.min.js')}}"></script>
-<script src="{{ asset('js/bootstrap-material-design.js') }}"></script>
-<script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
-<script src="{{ asset('js/plugins/chartist.min.js') }}"></script>
-<!-- Library for adding dinamically elements -->
-<script src="{{ asset('js/plugins/arrive.min.js" type="text/javascript') }}"></script>
-<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
-<script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
-<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
-<script src="{{ asset('js/material-dashboard.js?v=2.0.0') }}"></script>
 </html>

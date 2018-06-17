@@ -17,6 +17,13 @@ Route::get('/', 'PagesController@index')->name('index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 $this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
+
+// Dashboard Routes
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+// Questions Routes
+Route::get('/questions', 'QuestionsController@index')->name('questions');
+
+// Appointments Routes
+Route::get('/appointments', 'AppointmentsController@index')->name('appointments');

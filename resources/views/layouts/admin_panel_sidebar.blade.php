@@ -1,35 +1,27 @@
-<div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('img/bg7.jpg')}}">
-    <!--
-Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-Tip 2: you can also add an image using data-image tag
--->
-    <div class="logo">
-        <a href="{{ url('admin/dashboard') }}" class="simple-text logo-normal">
-            <img src="{{ asset('img/favicon/android-chrome-512x512.png') }}" style="height: 36px">
-            Dokuter
+<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <a class="nav-link" href="{{ url('/dashboard') }}">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
         </a>
-    </div>
-    <div class="sidebar-wrapper">
-        <ul class="nav">
-            <li class="nav-item ">
-                <a class="nav-link" href="{{ url('admin/dashboard') }}">
-                    <i class="material-icons">dashboard</i>
-                    <p>Dashboard</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="{{ url('admin/books') }}">
-                    <i class="material-icons">library_books</i>
-                    <p>Books</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('admin/question') }}">
-                    <i class="material-icons">bubble_chart</i>
-                    <p>Questions</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+    </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Appointments">
+        <a class="nav-link" href="{{url('/appointments')}}">
+            <i class="fa fa-fw fa-user-md"></i>
+            <span class="nav-link-text">Appointments</span>
+        </a>
+    </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Questions">
+        <a class="nav-link" href="{{ url('/questions') }}">
+            <i class="fa fa-fw fa-question-circle-o"></i>
+            <span class="nav-link-text">Questions</span>
+        </a>
+    </li>
+</ul>
+<ul class="navbar-nav sidenav-toggler">
+    <li class="nav-item">
+        <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+        </a>
+    </li>
+</ul>
