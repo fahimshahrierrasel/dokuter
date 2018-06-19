@@ -27,3 +27,6 @@ Route::get('/questions', 'QuestionsController@index')->name('questions');
 
 // Appointments Routes
 Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
+
+// Appointments Routes
+Route::get('/doc_profile', 'DoctorProfilesController@index')->name('doc_profile');

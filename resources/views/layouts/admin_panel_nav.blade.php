@@ -7,7 +7,7 @@
         @include('layouts.admin_panel_sidebar')
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-user-circle"></i> Profile</a>
+                <a class="nav-link" href="{{ url('/doc_profile') }}"><i class="fa fa-user-circle"></i> Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
