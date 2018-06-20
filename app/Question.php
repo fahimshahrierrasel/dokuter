@@ -12,4 +12,14 @@ class Question extends Model
     {
         return $this->belongsTo(Patient::class);
     }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function problemType()
+    {
+        return $this->hasOne(ProblemType::class);
+    }
 }
