@@ -13,7 +13,7 @@ class CreateUserSpecialityTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_speciality', function (Blueprint $table) {
+        Schema::create('speciality_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('speciality_id')->unsigned();
@@ -27,6 +27,6 @@ class CreateUserSpecialityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_speciality');
+        Schema::dropIfExists('speciality_user');
     }
 }

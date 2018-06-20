@@ -17,6 +17,12 @@
             <span class="nav-link-text">Questions</span>
         </a>
     </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Questions">
+        <a class="nav-link" href="{{ url('/my_specialities') }}">
+            <i class="fa fa-fw fa-question-circle-o"></i>
+            <span class="nav-link-text">My Specialities</span>
+        </a>
+    </li>
 </ul>
 <ul class="navbar-nav sidenav-toggler">
     <li class="nav-item">

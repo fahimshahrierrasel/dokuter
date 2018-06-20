@@ -29,4 +29,9 @@ Route::get('/questions', 'QuestionsController@index')->name('questions');
 Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
 
 // Appointments Routes
-Route::get('/doc_profile', 'DoctorProfilesController@index')->name('doc_profile');
+Route::get('/my_profile', 'DoctorProfilesController@index')->name('doc_profile');
+
+// Doctor Specialities Routes
+Route::get('/my_specialities', 'DoctorSpecialitiesController@index')->name('doc_specialities');
+Route::post('/my_specialities', 'DoctorSpecialitiesController@store');
+Route::delete('/my_specialities/{id}', 'DoctorSpecialitiesController@destroy');
