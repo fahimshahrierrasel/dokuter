@@ -36,3 +36,8 @@ Route::get('/my_profile', 'DoctorProfilesController@index')->name('doc_profile')
 Route::get('/my_specialities', 'DoctorSpecialitiesController@index')->name('doc_specialities');
 Route::post('/my_specialities', 'DoctorSpecialitiesController@store');
 Route::delete('/my_specialities/{id}', 'DoctorSpecialitiesController@destroy');
+
+// Doctor Chambers Routes
+Route::get('/my_chambers', 'ChambersController@index')->name('doc_chambers');
+Route::get('/my_chambers/new_chamber', 'ChambersController@create')->name('new_chamber');
+Route::post('/my_chambers', 'ChambersController@store');

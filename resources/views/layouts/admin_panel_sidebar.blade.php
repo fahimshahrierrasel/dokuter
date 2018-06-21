@@ -17,10 +17,16 @@
             <span class="nav-link-text">Questions</span>
         </a>
     </li>
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Questions">
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Specialities">
         <a class="nav-link" href="{{ url('/my_specialities') }}">
             <i class="fa fa-fw fa-question-circle-o"></i>
             <span class="nav-link-text">My Specialities</span>
+        </a>
+    </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Chambers">
+        <a class="nav-link" href="{{ url('/my_chambers') }}">
+            <i class="fa fa-fw fa-question-circle-o"></i>
+            <span class="nav-link-text">My Chambers</span>
         </a>
     </li>
 </ul>
