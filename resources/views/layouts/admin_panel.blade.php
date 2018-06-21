@@ -11,6 +11,7 @@
     <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
+    @yield('custom_css')
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

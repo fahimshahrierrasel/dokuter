@@ -41,3 +41,8 @@ Route::delete('/my_specialities/{id}', 'DoctorSpecialitiesController@destroy');
 Route::get('/my_chambers', 'ChambersController@index')->name('doc_chambers');
 Route::get('/my_chambers/new_chamber', 'ChambersController@create')->name('new_chamber');
 Route::post('/my_chambers', 'ChambersController@store');
+
+// Doctor Schedules Routes
+Route::get('/my_schedules', 'SchedulesController@index')->name('doc_schedules');
+Route::get('/my_schedules/new_schedule', 'SchedulesController@create')->name('new_schedule');
+Route::post('/my_schedules', 'SchedulesController@store');

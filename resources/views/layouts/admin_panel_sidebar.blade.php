@@ -29,6 +29,12 @@
             <span class="nav-link-text">My Chambers</span>
         </a>
     </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Schedules">
+        <a class="nav-link" href="{{ url('/my_schedules') }}">
+            <i class="fa fa-fw fa-question-circle-o"></i>
+            <span class="nav-link-text">My Schedules</span>
+        </a>
+    </li>
 </ul>
 <ul class="navbar-nav sidenav-toggler">
     <li class="nav-item">
