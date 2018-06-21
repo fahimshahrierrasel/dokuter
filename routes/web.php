@@ -24,6 +24,7 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 // Questions Routes
 Route::get('/questions', 'QuestionsController@index')->name('questions');
+Route::get('/questions/{question}', 'QuestionsController@show');
 
 // Appointments Routes
 Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
