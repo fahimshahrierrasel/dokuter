@@ -11,4 +11,9 @@ class Schedule extends Model
     {
         return $this->belongsTo(Chamber::class);
     }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }
