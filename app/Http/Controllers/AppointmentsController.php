@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Appointment;
+use Auth;
 use Illuminate\Http\Request;
 
 class AppointmentsController extends Controller
@@ -14,6 +15,8 @@ class AppointmentsController extends Controller
      */
     public function index()
     {
+//        $user = Auth::user();
+//        $appointments = $user->appointments;
         return view('admin.appointments');
     }
 
