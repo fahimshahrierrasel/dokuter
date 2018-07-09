@@ -19,6 +19,7 @@ class CreateSchedulesTable extends Migration
             $table->string("start_time", 12);
             $table->string("end_time", 12);
             $table->integer('chamber_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

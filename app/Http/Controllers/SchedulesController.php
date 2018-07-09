@@ -17,8 +17,8 @@ class SchedulesController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $chambers = $user->chambers;
-        return view('admin.schedules.index', compact('chambers'));
+        $schedules = $user->schedules()->orderBy('chamber_id');
+        return view('admin.schedules.index', compact('schedules'));
     }
 
     /**
@@ -41,14 +41,15 @@ class SchedulesController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $chamber = (new Chamber)->where('id', $request['chamber_id'])->first();
-
         $schedule = new Schedule;
         $schedule->weekday = $request['weekday'];
         $schedule->start_time = $request['start_time'];
         $schedule->end_time = $request['end_time'];
 
         $chamber->schedules()->save($schedule);
+        $user->schedules()->save($schedule);
 
         return redirect('/my_schedules');
     }

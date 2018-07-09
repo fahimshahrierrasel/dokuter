@@ -20,22 +20,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($chambers as $chamber)
-                        @forelse($chamber->schedules as $schedule)
-                            <tr>
-                                <td>{{ $chamber->name }}</td>
-                                <td>{{ $schedule->weekday }}</td>
-                                <td>{{ $schedule->start_time }}</td>
-                                <td>{{ $schedule->end_time }}</td>
-                                <td class="text-center">
-                                    <a href="{{url("my_chambers/$schedule->id")}}" class="btn btn-primary">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                    <a href="{{url("my_chambers/$schedule->id")}}" class="btn btn-danger">
-                                        <i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                        @empty
-                        @endforelse
+                    @foreach($schedules->get() as $schedule)
+                        <tr>
+                            <td>{{ $schedule->chamber->name }}</td>
+                            <td>{{ $schedule->weekday }}</td>
+                            <td>{{ $schedule->start_time }}</td>
+                            <td>{{ $schedule->end_time }}</td>
+                            <td class="text-center">
+                                <a href="{{url("my_chambers/$schedule->id")}}" class="btn btn-primary">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="{{url("my_chambers/$schedule->id")}}" class="btn btn-danger">
+                                    <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
