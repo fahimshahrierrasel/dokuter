@@ -20,33 +20,33 @@ Auth::routes();
 $this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
 
 // Dashboard Routes
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/doctor/dashboard', 'HomeController@index')->name('dashboard');
 
 // Questions Routes
-Route::get('/questions', 'QuestionsController@index')->name('questions');
-Route::get('/questions/{question}', 'QuestionsController@show');
+Route::get('/doctor/questions', 'QuestionsController@index')->name('questions');
+Route::get('/doctor/questions/{question}', 'QuestionsController@show');
 
 // Appointments Routes
-Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
+Route::get('/doctor/appointments', 'AppointmentsController@index')->name('appointments');
 
 // Profile Routes
-Route::get('/my_profile', 'DoctorProfilesController@index')->name('doc_profile');
-Route::get('/my_profile/create', 'DoctorProfilesController@create')->name('doc_profile_create');
-Route::post('/my_profile', 'DoctorProfilesController@store');
-Route::get('/my_profile/edit/{id}', 'DoctorProfilesController@edit')->name('doc_profile_edit');
-Route::put('/my_profile/{id}', 'DoctorProfilesController@update');
+Route::get('/doctor/my_profile', 'DoctorProfilesController@index')->name('doc_profile');
+Route::get('/doctor/my_profile/create', 'DoctorProfilesController@create')->name('doc_profile_create');
+Route::post('/doctor/my_profile', 'DoctorProfilesController@store');
+Route::get('/doctor/my_profile/edit/{id}', 'DoctorProfilesController@edit')->name('doc_profile_edit');
+Route::put('/doctor/my_profile/{id}', 'DoctorProfilesController@update');
 
 // Doctor Specialities Routes
-Route::get('/my_specialities', 'DoctorSpecialitiesController@index')->name('doc_specialities');
-Route::post('/my_specialities', 'DoctorSpecialitiesController@store');
-Route::delete('/my_specialities/{id}', 'DoctorSpecialitiesController@destroy');
+Route::get('/doctor/my_specialities', 'DoctorSpecialitiesController@index')->name('doc_specialities');
+Route::post('/doctor/my_specialities', 'DoctorSpecialitiesController@store');
+Route::delete('/doctor/my_specialities/{id}', 'DoctorSpecialitiesController@destroy');
 
 // Doctor Chambers Routes
-Route::get('/my_chambers', 'ChambersController@index')->name('doc_chambers');
-Route::get('/my_chambers/new_chamber', 'ChambersController@create')->name('new_chamber');
-Route::post('/my_chambers', 'ChambersController@store');
+Route::get('/doctor/my_chambers', 'ChambersController@index')->name('doc_chambers');
+Route::get('/doctor/my_chambers/new_chamber', 'ChambersController@create')->name('new_chamber');
+Route::post('/doctor/my_chambers', 'ChambersController@store');
 
 // Doctor Schedules Routes
-Route::get('/my_schedules', 'SchedulesController@index')->name('doc_schedules');
-Route::get('/my_schedules/new_schedule', 'SchedulesController@create')->name('new_schedule');
-Route::post('/my_schedules', 'SchedulesController@store');
+Route::get('/doctor/my_schedules', 'SchedulesController@index')->name('doc_schedules');
+Route::get('/doctor/my_schedules/new_schedule', 'SchedulesController@create')->name('new_schedule');
+Route::post('/doctor/my_schedules', 'SchedulesController@store');

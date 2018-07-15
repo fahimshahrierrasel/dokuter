@@ -89,7 +89,7 @@ class RegisterController extends Controller
             logger()->error($exception);
             return "Whoops! something went wrong.";
         }
-        return redirect()->to('/dashboard');
+        return redirect()->to('/doctor/my_profile/create');
     }
 
     /**
