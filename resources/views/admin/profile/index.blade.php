@@ -5,18 +5,12 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            {{ $user->name }}'s Profile
+            {{ $user->name }}'s Profile <a href="{{ url('/my_profile/edit') }}/{{ $profile->id }}" class="btn btn-outline-primary float-right">Edit</a>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-3">
-                    {{--<h5>{{ $user->name }}</h5>--}}
-                    <img src="https://picsum.photos/200/200" alt="..." class="rounded-circle p-3" style="height: 200px">
-                    <form>
-                        <div class="form-group">
-                            <input type="file" class="form-control-file" id="profilePictureControl">
-                        </div>
-                    </form>
+                    <img class="img-thumbnail" id="profile_pic" src="{{ asset('/images/profile_pics/'.$profile->pic) }}" alt="Profile Picture"/>
                 </div>
                 <div class="col-9">
                     <table class="table table-borderless">

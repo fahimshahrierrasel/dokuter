@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('img/favicon/android-chrome-512x512.png') }}" style="height: 36px">
+                <img src="{{ asset('img/dokuter_logo.png') }}" style="height: 36px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">

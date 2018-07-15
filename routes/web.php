@@ -29,8 +29,12 @@ Route::get('/questions/{question}', 'QuestionsController@show');
 // Appointments Routes
 Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
 
-// Appointments Routes
+// Profile Routes
 Route::get('/my_profile', 'DoctorProfilesController@index')->name('doc_profile');
+Route::get('/my_profile/create', 'DoctorProfilesController@create')->name('doc_profile_create');
+Route::post('/my_profile', 'DoctorProfilesController@store');
+Route::get('/my_profile/edit/{id}', 'DoctorProfilesController@edit')->name('doc_profile_edit');
+Route::put('/my_profile/{id}', 'DoctorProfilesController@update');
 
 // Doctor Specialities Routes
 Route::get('/my_specialities', 'DoctorSpecialitiesController@index')->name('doc_specialities');

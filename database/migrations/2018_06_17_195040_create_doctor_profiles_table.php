@@ -17,6 +17,7 @@ class CreateDoctorProfilesTable extends Migration
             $table->increments('id');
             $table->string('education', 300);
             $table->text('experience');
+            $table->string('pic', 255);
             $table->integer("user_id");
             $table->timestamps();
         });
