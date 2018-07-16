@@ -17,7 +17,7 @@ class ChambersController extends Controller
     {
         $user = Auth::user();
         $chambers = $user->chambers;
-        return view('admin.chambers.index', compact('chambers'));
+        return view('doctor.chambers.index', compact('chambers'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ChambersController extends Controller
      */
     public function create()
     {
-        return view('admin.chambers.create');
+        return view('doctor.chambers.create');
     }
 
     /**

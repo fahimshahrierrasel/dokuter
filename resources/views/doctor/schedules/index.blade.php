@@ -1,4 +1,4 @@
-@extends('layouts.admin_panel')
+@extends('doctor.layouts.admin_panel')
 
 @section('page_title', 'My Schedules')
 

@@ -19,19 +19,19 @@
     </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Specialities">
         <a class="nav-link" href="{{ url('/doctor/my_specialities') }}">
-            <i class="fa fa-fw fa-question-circle-o"></i>
+            <i class="fa fa-stethoscope"></i>
             <span class="nav-link-text">My Specialities</span>
         </a>
     </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Chambers">
         <a class="nav-link" href="{{ url('/doctor/my_chambers') }}">
-            <i class="fa fa-fw fa-question-circle-o"></i>
+            <i class="fa fa-medkit"></i>
             <span class="nav-link-text">My Chambers</span>
         </a>
     </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Schedules">
         <a class="nav-link" href="{{ url('/doctor/my_schedules') }}">
-            <i class="fa fa-fw fa-question-circle-o"></i>
+            <i class="fa fa-calendar"></i>
             <span class="nav-link-text">My Schedules</span>
         </a>
     </li>

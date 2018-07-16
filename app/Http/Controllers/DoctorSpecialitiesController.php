@@ -28,7 +28,7 @@ class DoctorSpecialitiesController extends Controller
         $user = Auth::user();
         $specialities = Speciality::all();
         $doc_specialties = $user->speciality;
-        return view('admin.doc_speciality', compact('specialities', 'doc_specialties'));
+        return view('doctor.doc_speciality', compact('specialities', 'doc_specialties'));
     }
 
 

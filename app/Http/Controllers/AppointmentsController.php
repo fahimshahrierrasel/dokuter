@@ -17,7 +17,7 @@ class AppointmentsController extends Controller
     {
 //        $user = Auth::user();
 //        $appointments = $user->appointments;
-        return view('admin.appointments');
+        return view('doctor.appointments');
     }
 
     /**

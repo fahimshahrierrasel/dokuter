@@ -10,26 +10,26 @@
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
-    <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin.min.css') }}" rel="stylesheet">
     @yield('custom_css')
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <!-- Navigation-->
-@include('layouts.admin_panel_nav')
+@include('doctor.layouts.admin_panel_nav')
 <div class="content-wrapper">
     <div class="container-fluid">
         @yield('content')
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
-    @include('layouts.admin_panel_footer')
+    @include('doctor.layouts.admin_panel_footer')
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fa fa-angle-up"></i>
     </a>
     <!-- Logout Modal-->
-    @include('layouts.admin_panel_modal')
+    @include('doctor.layouts.admin_panel_modal')
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

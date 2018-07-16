@@ -23,7 +23,7 @@ class DoctorProfilesController extends Controller
         $profile = (new DoctorProfile)->where('user_id', $user->id)->first();
 
         if ($profile != null) {
-            return view('admin.profile.index', compact('user', 'profile'));
+            return view('doctor.profile.index', compact('user', 'profile'));
         }
         return redirect()->route('doc_profile_create');
     }
@@ -40,7 +40,7 @@ class DoctorProfilesController extends Controller
         if ($profile != null) {
             return redirect()->to('/my_profile/edit/'.$profile->id);
         } else {
-            return view('admin.profile.create');
+            return view('doctor.profile.create');
         }
     }
 
@@ -91,7 +91,7 @@ class DoctorProfilesController extends Controller
     public function edit($id)
     {
         $profile = DoctorProfile::findOrFail($id);
-        return view('admin.profile.edit', compact('profile'));
+        return view('doctor.profile.edit', compact('profile'));
     }
 
     /**

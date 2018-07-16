@@ -4,7 +4,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        @include('layouts.admin_panel_sidebar')
+        @include('doctor.layouts.admin_panel_sidebar')
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/doctor/my_profile') }}"><i class="fa fa-user-circle"></i> Profile</a>

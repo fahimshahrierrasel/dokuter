@@ -18,7 +18,7 @@ class SchedulesController extends Controller
     {
         $user = Auth::user();
         $schedules = $user->schedules()->orderBy('chamber_id');
-        return view('admin.schedules.index', compact('schedules'));
+        return view('doctor.schedules.index', compact('schedules'));
     }
 
     /**
@@ -30,7 +30,7 @@ class SchedulesController extends Controller
     {
         $user = Auth::user();
         $chambers = $user->chambers;
-        return view('admin.schedules.create', compact('chambers'));
+        return view('doctor.schedules.create', compact('chambers'));
     }
 
     /**

@@ -48,7 +48,7 @@ class UserRegistrationSuccess extends Notification
     {
         $user = $this->user;
         return (new MailMessage)
-            ->from('admin@dokuter.com')
+            ->from('doctor@dokuter.com')
             ->subject('Registration Successful')
             ->greeting(sprintf('Hello %s', $user->name))
             ->line('You have successfully registered to Dokuter. Please activate your account.')
