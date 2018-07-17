@@ -14,10 +14,13 @@ class UserSeeder extends Seeder
     {
         $admin_user = new User();
         $admin_user->name = 'Dokuter Admin';
-        $admin_user->username = 'doctor';
-        $admin_user->email = 'doctor@dokuter.com';
-        $admin_user->password = bcrypt('doctor@dokuter');
+        $admin_user->username = 'admin';
+        $admin_user->email = 'admin@dokuter.com';
+        $admin_user->password = bcrypt('admin@dokuter');
         $admin_user->status = 1;
         $admin_user->save();
+
+        $admin_user->roles()
+            ->attach((new \App\Role)->where('name', 'admin')->first());
     }
 }

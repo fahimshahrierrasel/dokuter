@@ -50,3 +50,13 @@ Route::post('/doctor/my_chambers', 'ChambersController@store');
 Route::get('/doctor/my_schedules', 'SchedulesController@index')->name('doc_schedules');
 Route::get('/doctor/my_schedules/new_schedule', 'SchedulesController@create')->name('new_schedule');
 Route::post('/doctor/my_schedules', 'SchedulesController@store');
+
+
+////////////////////// Admin Panel /////////////////////
+// Login Routes
+Route::get('/admin/login', 'AdminAuthController@login');
+Route::post('/admin/login', 'AdminAuthController@postLogin')->name('admin_post_login');
+
+// Dashboard Route
+Route::get('/admin/dashboard', 'AdminHomeController@index')->name('admin_dashboard');
+
