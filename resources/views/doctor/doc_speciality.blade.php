@@ -18,7 +18,7 @@
                         <tr>
                             <td>{{ $speciality->name }}</td>
                             <td>
-                                <form method="POST" action="{{url("my_specialities/$speciality->id")}}">
+                                <form method="POST" action="{{url("/doctor/my_specialities/$speciality->id")}}">
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-6">
             <h1>Select Your Specialities</h1>
-            <form method="POST" action="{{ url('/my_specialities') }}">
+            <form method="POST" action="{{ url('/doctor/my_specialities') }}">
                 @csrf
                 <div class="form-group">
                     <label for="specialitySelect">Specialities</label>

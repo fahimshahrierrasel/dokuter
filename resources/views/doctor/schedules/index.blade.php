@@ -6,7 +6,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header"><h3 class="float-left">Schedules List</h3><a
-                        href="{{url("my_schedules/new_schedule")}}" class="btn btn-primary float-right">New
+                        href="{{url("/doctor/my_schedules/new_schedule")}}" class="btn btn-primary float-right">New
                     Schedules</a></div>
             <div class="card-body">
                 <table class="table table-hover table-bordered">

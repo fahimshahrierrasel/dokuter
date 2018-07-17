@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">Update Profile</div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/my_profile') }}/{{ $profile->id }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ url('/doctor/my_profile') }}/{{ $profile->id }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">

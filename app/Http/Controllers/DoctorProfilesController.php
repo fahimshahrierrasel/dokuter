@@ -38,7 +38,7 @@ class DoctorProfilesController extends Controller
         $user = Auth::user();
         $profile = (new DoctorProfile)->where('user_id', $user->id)->first();
         if ($profile != null) {
-            return redirect()->to('/my_profile/edit/'.$profile->id);
+            return redirect()->to('/doctor/my_profile/edit/'.$profile->id);
         } else {
             return view('doctor.profile.create');
         }

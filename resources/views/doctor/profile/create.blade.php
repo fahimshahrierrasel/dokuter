@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">Update Profile</div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/my_profile') }}">
+                <form method="POST" action="{{ url('/doctor/my_profile') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="education">Education <span class="text-danger">*</span></label>

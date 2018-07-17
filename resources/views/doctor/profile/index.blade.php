@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            {{ $user->name }}'s Profile <a href="{{ url('/my_profile/edit') }}/{{ $profile->id }}" class="btn btn-outline-primary float-right">Edit</a>
+            {{ $user->name }}'s Profile <a href="{{ url('/doctor/my_profile/edit') }}/{{ $profile->id }}" class="btn btn-outline-primary float-right">Edit</a>
         </div>
         <div class="card-body">
             <div class="row">

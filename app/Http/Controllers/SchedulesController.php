@@ -51,7 +51,7 @@ class SchedulesController extends Controller
         $chamber->schedules()->save($schedule);
         $user->schedules()->save($schedule);
 
-        return redirect('/my_schedules');
+        return redirect('/doctor/my_schedules');
     }
 
     /**

@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">New Chamber</div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/my_chambers') }}">
+                <form method="POST" action="{{ url('/doctor/my_chambers') }}">
                     @csrf
                     <div class="form-group">
                         <label for="chamberName">Chamber Name <span class="text-danger">*</span></label>

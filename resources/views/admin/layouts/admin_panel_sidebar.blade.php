@@ -6,7 +6,7 @@
         </a>
     </li>
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Appointments">
-        <a class="nav-link" href="{{url('/admin/doctors')}}">
+        <a class="nav-link" href="{{ url('/admin/doctors') }}">
             <i class="fa fa-fw fa-user-md"></i>
             <span class="nav-link-text">Doctors</span>
         </a>

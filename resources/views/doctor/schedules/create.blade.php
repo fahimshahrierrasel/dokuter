@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">New Schedules</div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/my_schedules') }}">
+                <form method="POST" action="{{ url('/doctor/my_schedules') }}">
                     @csrf
                     <div class="form-group">
                         <label for="chamberSelect">Select Chamber</label>

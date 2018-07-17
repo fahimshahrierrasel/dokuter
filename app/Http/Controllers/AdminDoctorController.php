@@ -1,13 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Chamber;
-use Illuminate\Support\Facades\Auth;
-
+use App\Role;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class ChambersController extends Controller
+class AdminDoctorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +22,12 @@ class ChambersController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $chambers = $user->chambers;
-        return view('doctor.chambers.index', compact('chambers'));
+        $role = (new Role)->where('name', 'doctor')->first();
+        $role_user = DB::table('role_user')->where('role_id', $role->id)->pluck('user_id');
+
+        $doctors = User::all()->whereIn('id', $role_user);
+
+        return view('admin.doctors.index', compact('doctors'));
     }
 
     /**
@@ -27,7 +37,7 @@ class ChambersController extends Controller
      */
     public function create()
     {
-        return view('doctor.chambers.create');
+        //
     }
 
     /**
@@ -38,14 +48,7 @@ class ChambersController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
-        $chamber = new Chamber;
-        $chamber->name = $request['name'];
-        $chamber->location = $request['location'];
-        $chamber->gps_lat = $request['gps_lat'];
-        $chamber->gps_long = $request['gps_long'];
-        $user->chambers()->save($chamber);
-        return redirect('/doctor/my_chambers');
+        //
     }
 
     /**
@@ -56,7 +59,12 @@ class ChambersController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = (new User)->where('id', $id)->first();
+
+        $chambers = (new Chamber)->where('user_id', $user->id)->get();
+        //dd($chambers);
+        $schedules = $user->schedules()->orderBy('chamber_id')->get();
+        return view('admin.doctors.show', compact('user', 'chambers', 'schedules'));
     }
 
     /**

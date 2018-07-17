@@ -12,21 +12,16 @@
                 @foreach($questions as $question)
                     <div class="blog-post">
                         <h2 class="blog-post-title"><a
-                                    href="{{ url('questions/'.$question->id) }}">{{ $question->title }}</a></h2>
+                                    href="{{ url('/doctor/questions/'.$question->id) }}">{{ $question->title }}</a></h2>
                         <p class="blog-post-meta">{{$question->created_at->diffForHumans()}} by <a
                                     href="#">{{ $question->patient->patient_name }}</a></p>
                         <p>
                             {{ str_limit($question->body, 100) }}...
                         </p>
-                        <a href="{{ url('questions/'.$question->id) }}" class="btn btn-info text-white">Read More</a>
+                        <a href="{{ url('/doctor/questions/'.$question->id) }}" class="btn btn-info text-white">Read More</a>
                     </div><!-- /.blog-post -->
                     <hr>
                 @endforeach
-                <br>
-                <nav class="blog-pagination">
-                    <a class="btn btn-outline-primary" href="#">Older</a>
-                    <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-                </nav>
             </div><!-- /.blog-main -->
         </div>
     </div>

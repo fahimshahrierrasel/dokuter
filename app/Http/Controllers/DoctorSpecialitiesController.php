@@ -44,7 +44,7 @@ class DoctorSpecialitiesController extends Controller
         $user->speciality()->sync([
             $request['speciality']
         ], false);
-        return redirect("my_specialities");
+        return redirect("/doctor/my_specialities");
     }
 
     /**
@@ -58,6 +58,6 @@ class DoctorSpecialitiesController extends Controller
         $user = Auth::user();
         $user->speciality()->detach($id);
 
-        return redirect("my_specialities");
+        return redirect("/doctor/my_specialities");
     }
 }

@@ -60,3 +60,6 @@ Route::post('/admin/login', 'AdminAuthController@postLogin')->name('admin_post_l
 // Dashboard Route
 Route::get('/admin/dashboard', 'AdminHomeController@index')->name('admin_dashboard');
 
+// Doctors Routes
+Route::get('/admin/doctors', 'AdminDoctorController@index');
+Route::get('/admin/doctors/{id}', 'AdminDoctorController@show');

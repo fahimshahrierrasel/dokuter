@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header"><h3 class="float-left">Chamber List</h3><a href="{{url("my_chambers/new_chamber")}}" class="btn btn-primary float-right">New Chamber</a></div>
+            <div class="card-header"><h3 class="float-left">Chamber List</h3><a href="{{url("/doctor/my_chambers/new_chamber")}}" class="btn btn-primary float-right">New Chamber</a></div>
             <div class="card-body">
                 <table class="table table-hover table-bordered">
                     <thead>
