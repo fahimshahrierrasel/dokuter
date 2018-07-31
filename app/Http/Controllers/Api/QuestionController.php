@@ -26,4 +26,24 @@ class QuestionController extends Controller
 
         return response()->json($myQuestions, 200);
     }
+
+    public function getQuestion($qid) {
+        $question = DB::table('questions')
+            ->join('problem_types', 'questions.problem_type_id', '=', 'problem_types.id')
+            ->select('questions.id', 'questions.title', 'questions.body', 'problem_types.name', 'questions.created_at')
+            ->where('questions.id', '=', $qid)->first();
+
+        return response()->json($question, 200);
+    }
+
+    public function getAnswers($qid) {
+        $question = DB::table('answers')
+            ->join('users', 'answers.user_id', '=', 'users.id')
+            ->join('doctor_profiles', 'answers.user_id', '=', 'doctor_profiles.user_id')
+            ->select('answers.id', 'answers.answer', 'answers.created_at',
+                'users.name', 'doctor_profiles.education', 'doctor_profiles.experience', 'doctor_profiles.pic')
+            ->where('answers.question_id', '=', $qid)->get();
+
+        return response()->json($question, 200);
+    }
 }

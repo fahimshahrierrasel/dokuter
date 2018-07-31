@@ -29,4 +29,8 @@ Route::get('/specialities', 'Api\SpecialityController@getSpecialities');
 
 // Questions
 Route::post('/questions', 'Api\QuestionController@store');
-Route::get('/questions/{id}', 'Api\QuestionController@getMyQuestions');
+Route::get('/questions/{pid}', 'Api\QuestionController@getMyQuestions');
+Route::get('/question/{qid}', 'Api\QuestionController@getQuestion');
+
+// Answers
+Route::get('/answers/{qid}', 'Api\QuestionController@getAnswers');
